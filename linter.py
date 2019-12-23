@@ -4,7 +4,7 @@ from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLi
 
 class GDLint(Linter):
     cmd = 'gdscript-linter ${file}'
-    regex = r'^.+:(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
+    regex = r'^.+:(?P<line>\d+):(?P<col>\d+):(?P<message>.+)'
     multiline = False
     defaults = {
         'selector': 'source.gd, source.gdscript'
