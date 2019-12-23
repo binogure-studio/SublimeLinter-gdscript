@@ -1,10 +1,10 @@
 from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
 
 
-class __class__(Linter):
-    cmd = '__cmd__'
+class GDLint(Linter):
+    cmd = 'gdscript-linter ${args}'
     regex = r''
     multiline = False
     defaults = {
-        'selector': 'source.python'
+        'selector': 'source.gd'
     }
