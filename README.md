@@ -21,3 +21,7 @@ In order for `gdscript` to be executed by SublimeLinter, you must ensure that it
 ## Settings
 - SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
 - Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
+
+|Setting|Description    |
+|:------|:--------------|
+|root   |Path to the root folder that contains the engine.cfg file|
