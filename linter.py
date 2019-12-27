@@ -4,6 +4,7 @@ from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLi
 
 class GDLint(Linter):
   # cmd = 'gdscript-linter ${file}'
+  cmd = None
 
   regex = r'^.+:(?P<line>\d+):(?P<col>\d+):(?P<message>.+)'
   multiline = False
@@ -12,11 +13,11 @@ class GDLint(Linter):
   }
 
   def cmd(self):
-    settings = self.settings
     command = ['gdscript-linter']
 
-    if 'root_folder' in settings:
-      command.extend(['-p', settings.get('root_folder')])
+    if 'root_folder' in self.settings:
+      command.append('-p')
+      command.append(self.settings.get('root_folder'))
 
     command.append(self.filename)
 
